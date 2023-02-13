@@ -137,7 +137,7 @@ button{
     /* margin-left: 60vw; */
     /* display: flex; */
     /* position: relative; */
-    background-image: url(/image/IMG_20221117_193913.jpg);
+    background-image: url(image/IMG_20221117_193913.jpg);
     background-size: cover;
     z-index: 1;
     margin: 10vw;
@@ -270,7 +270,7 @@ p{
     background-color: black;
     padding: 5vw;
     height: 65vh;
-    background-image: url(/image/pexels-marcelo-jaboo-715995.jpg);
+    background-image: url(image/pexels-marcelo-jaboo-715995.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -341,7 +341,7 @@ p{
     display: initial;
   }
   #ges{
-    background-image: url(/image/images.jpg);
+    background-image: url(image/images.jpg);
     background-size: cover;
   }
   #eduinfo{
@@ -352,16 +352,16 @@ p{
  }
 
  #mbrs{
-    background-image: url(/image/mbrs.jpg);
+    background-image: url(image/mbrs.jpg);
     background-size: cover;
 }
 #motion{
-    background-image: url(/image/maabrati.jpg);
+    background-image: url(image/maabrati.jpg);
     background-size: cover;
     /* transform: scaleX(-1); */
 }
 #btech{
-    background-image: url(/image/reva.jpg);
+    background-image: url(image/reva.jpg);
     background-size: cover;
 }
 #education{
@@ -374,7 +374,7 @@ p{
     padding: 2vw;
 }
 .aboutme:hover{
-    /* background-image: url(/image/pexels-junior-teixeira-2047905.jpg); */
+    /* background-image: url(image/pexels-junior-teixeira-2047905.jpg); */
     background-size: cover;
     text-align: left;
     font-size: 2.4vw;
@@ -391,7 +391,7 @@ p{
     color: rgb(243, 137, 137);
 }
 #Design:hover{
-    background-image: url(/image/pexels-ahmed-adly-1270184.jpg);
+    background-image: url(image/pexels-ahmed-adly-1270184.jpg);
     font-family: Arial, Helvetica, sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
@@ -404,7 +404,7 @@ p{
     /* text-shadow:1px 1px 5px rgb(231, 198, 198),2px 2px 5px rgb(21, 20, 20); ; */
 }
 #Devlop:hover{
-    background-image: url(/image/pexels-sebastiaan-stam-1480690.jpg);
+    background-image: url(image/pexels-sebastiaan-stam-1480690.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgb(81, 79, 79);
@@ -417,7 +417,7 @@ p{
     /* text-shadow:1px 1px 5px rgb(231, 198, 198),2px 2px 5px rgb(21, 20, 20); ; */
 }
 #more:hover{
-    background-image: url(/image/pexels-junior-teixeira-2047905.jpg);
+    background-image: url(image/pexels-junior-teixeira-2047905.jpg);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-size: cover;
     background-repeat: no-repeat;
