@@ -18,7 +18,7 @@ span{
     grid-template-columns: auto auto auto;
     justify-content: space-between;
     background-color: rgb(7, 7, 7);
-    background-image: url("/image/pexels-mikechie-esparagoza-1601773.jpg");
+    background-image: url("image/pexels-mikechie-esparagoza-1601773.jpg");
     background-size: cover;
     overflow: scroll;
     
