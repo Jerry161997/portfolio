@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sailo Web Devloper & Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="/jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="logo">
+            <h2 >
+                Sailo<span>dhar</span>
+            </h2>
+            <button style="display: block;" id="back" onclick="history.back()">Back</button>
+            <button style="display: block;" id="forward" onclick="history.forward()">Forward</button>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="btncall">
+            <button> Call me</button>
+        </div>
+        <div class="info">
+            <h3>
+                Hello 
+                <p id="gre"></p>
+                Time:<span id="hour"></span>
+            </h3>
+            <script>
+                let t = new Date().getHours();
+                let gre;
+                let hour=new Date().getHours();
+                let min= new Date().getMinutes();
+                if (t < 10) {
+                    gre = 'Good Morning';
+                }
+                else if (t < 12) {
+                    gre = 'Good Day';
+
+                }
+                else if (t < 14) {
+                    gre = 'Good Afternoon';
+
+                }
+                else if (t < 20) {
+                    gre = 'Good Evening';
+
+                }
+                else {
+                    gre = 'Good Night';
+                }
+                document.getElementById('gre').innerHTML = gre;
+                document.getElementById('hour').innerHTML =hour +":"+min;
+            </script>
+            <h1>
+
+                <p id="Sailo" class="text-light"></h1></p>
+            
+            <button onclick="typeWriter()">Devloped by</button>
+            <script>
+                var i = 0;
+                var txt = 'Sailodhar Rabha';
+                var speed = 100;
+
+                function typeWriter() {
+                    if (i < txt.length) {
+                        document.getElementById("Sailo").innerHTML += txt.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
+                }
+            </script>
+        </div>
+        <div></div>
+        <div class="enquiry">
+            <input type="text" placeholder="Enter your email" value="">
+            <!-- <input type="submit" name="" value="Let's Go"> -->
+        </div>
+        <!-- <div class="photo">
+            <!-- <img src="/image/IMG_20221117_193913.jpg" alt=""> -->
+        <!-- </div> --> -->
+    </div>
+    <section>
+        
+        <div class="aboutme">
+            <!-- About ME! -->
+            <h3 id="about">About me</h3>
+            <p id="ab">I am a Web Devloper and Designer. Have esperties in maching learning and Deep Learning.
+                Presently working on MSME, TRTC (Guwahati).
+            </p>
+            <button>Read more.</button>
+
+        </div>
+    </section>
+    <div class="service">
+        <div class="card">
+            <div id="Design">
+                Designing
+            </div>
+            <div id="Devlop">
+                Devloping
+            </div>
+            <div id="more">
+                More
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <h2>
+
+            Contact Me 
+        </h2>
+        <h4>
+            +91 7619374461
+            <br>
+            sailodharrabha@gmail.com
+        </h4>
+        <p>
+            Copyright&copy;2023-26 <br> By Sailo
+        </p>
+    </footer>
+
+    
+</body>
+
+</html>

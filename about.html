@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/jquery-3.6.3.min.js"></script>
+</head>
+
+<body>
+    <div class="hero" id="hero">
+        <div class="logo">
+            <h2>
+                Sailo<span>dhar</span>
+            </h2>
+            <button style="display: block;" id="back" onclick="history.back()">Back</button>
+            <button style="display: block;" id="forward" onclick="history.forward()">Forward</button>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="btncall">
+            <button> Call me</button>
+        </div>
+        <div class="info">
+            <h3>
+                Hello
+                <p id="gre"></p>
+                Time:<span id="hour"></span>
+            </h3>
+            <script>
+                let t = new Date().getHours();
+                let gre;
+                let hour = new Date().getHours();
+                let min = new Date().getMinutes();
+                if (t < 10) {
+                    gre = 'Good Morning';
+                }
+                else if (t < 12) {
+                    gre = 'Good Day';
+
+                }
+                else if (t < 14) {
+                    gre = 'Good Afternoon';
+
+                }
+                else if (t < 20) {
+                    gre = 'Good Evening';
+
+                }
+                else {
+                    gre = 'Good Night';
+                }
+                document.getElementById('gre').innerHTML = gre;
+                document.getElementById('hour').innerHTML = hour + ":" + min;
+            </script>
+            <h1>
+
+                <p id="Sailo" class="text-light">
+            </h1>
+            </p>
+
+            <button onclick="typeWriter()">Devloped by</button>
+            <script>
+                var i = 0;
+                var txt = 'Sailodhar Rabha';
+                var speed = 100;
+
+                function typeWriter() {
+                    if (i < txt.length) {
+                        document.getElementById("Sailo").innerHTML += txt.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <section class="section">
+        Hello
+        My name is
+        <h1>
+            Sailodhar Rabha.
+        </h1>
+        Garduated from REVA University .
+        <div class="">
+            <div id="flip">Click to See Photo</div>
+            <button id="stop"> Stop!</button>
+            <button id="hide"> Hide!</button>
+            <div id="panel" class="photo"></div>
+        </div>
+    </section>
+    <div class="header">
+
+        <h1 id="education">
+
+
+           <span >
+            Edu
+        </span>
+        cation.
+        </h1>
+        <div class="card">
+
+            <div class="clic" onclick="return ges()" id="ges">
+                <!-- L.K.G to 7 -->
+            </div>
+            <div class="clic" onclick="return mbrs()" id="mbrs">
+                <!-- 7 to 10 -->
+            </div>
+            <div class="clic" onclick="return motion()" id="motion">
+                <!-- 10+2 -->
+            </div>
+            <div class="clic" onclick="return btech()" id="btech">
+                <!-- B.tech -->
+            </div>
+            <!-- <p class="info"></p> -->
+        </div>
+        <div>
+
+            <button id="edu2"> Name of Institute<p id="edu"></button>
+        </div>
+        <div id="eduinfo" class="eduges">
+            <h4>
+                Goalpara English School
+
+            </h4>
+            From K.G to class 7 I have studied Here.<br> I really enjoyed a lot
+            <span>
+
+                but
+            </span>
+            for Higher studies <br>I had to move. <br> <br>
+            <div>
+                Address
+            </div>
+            4JQ4+R78, Bhalukdubi, Assam 783121
+
+        </div>
+        <div id="eduinfo" class="edumbrs">
+            <h4>
+                Miles Bronson Residential School
+
+            </h4>
+            My Life took a High Jump after Entering
+            <span>
+                Miles Bronson Residential School
+
+            </span>
+            for Higher studies <br>I had to move. <br> <br>
+            <div>
+                Address
+            </div>
+            4JQ4+R78, Bhalukdubi, Assam 783121
+
+        </div>
+        <!-- InFormation -->
+        <!-- Address:<i >https://www.google.com/maps/dir//goalpara+english+school/@25.8504945,90.7067563,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3759b3541a3b0a97:0xba1381bebf0a400d!2m2!1d90.6057125!2d26.1395349?hl=en</i> -->
+        </p>
+    </div>
+    <footer>
+        <h2>
+
+            Contact Me 
+        </h2>
+        <h4>
+            +91 7619374461
+            <br>
+            sailodharrabha@gmail.com
+        </h4>
+        <p>
+            Copyright&copy;2023-26 <br> By Sailo
+        </p>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideDown(5000);
+            });
+            $("#stop").click(function () {
+                $("#panel").stop();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $(".photo").animate({
+                    height: 'toggle'
+                });
+            });
+        });
+        $(document).ready(function () {
+            $("#eduinfo").click(function () {
+                $("#eduinfo").animate({
+                    height: 'toggle'
+                });
+            });
+        });
+
+
+        $(document).ready(function () {
+            $(".clic").click(function () {
+                $("#edu2").slideDown(20);
+            });
+        });
+
+        $("#ges").click(function () {
+
+            $(".edumbrs").hide();
+            $(".eduges").show();
+        });
+        $("#mbrs").click(function () {
+            $(".eduges").hide();
+            $(".edumbrs").show();
+        });
+    </script>
+
+
+    <script>
+        function ges() {
+            document.getElementById('edu2').innerHTML = 'Goalpara English School';
+        }
+        function mbrs() {
+            document.getElementById('edu2').innerHTML = 'Miles Bronson Residential School';
+
+        }
+        function motion() {
+            document.getElementById('edu2').innerHTML = 'Maa Bharti Ser. Secondary School';
+
+        }
+        function btech() {
+            document.getElementById('edu2').innerHTML = 'REVA University';
+
+        }
+    </script>
+</body>
+
+</html>

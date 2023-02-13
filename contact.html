@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero" id="hero">
+        <div class="logo">
+            <h2>
+                Sailo<span>dhar</span>
+            </h2>
+            <button style="display: block;" id="back" onclick="history.back()">Back</button>
+            <button style="display: block;" id="forward" onclick="history.forward()">Forward</button>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="btncall">
+            <button> Call me</button>
+        </div>
+        <div class="info">
+            <h3>
+                Hello
+                <p id="gre"></p>
+                Time:<span id="hour"></span>
+            </h3>
+            <script>
+                let t = new Date().getHours();
+                let gre;
+                let hour = new Date().getHours();
+                let min = new Date().getMinutes();
+                if (t < 10) {
+                    gre = 'Good Morning';
+                }
+                else if (t < 12) {
+                    gre = 'Good Day';
+
+                }
+                else if (t < 14) {
+                    gre = 'Good Afternoon';
+
+                }
+                else if (t < 20) {
+                    gre = 'Good Evening';
+
+                }
+                else {
+                    gre = 'Good Night';
+                }
+                document.getElementById('gre').innerHTML = gre;
+                document.getElementById('hour').innerHTML = hour + ":" + min;
+            </script>
+            <h1>
+
+                <p id="Sailo" class="text-light">
+            </h1>
+            </p>
+
+            <button onclick="typeWriter()">Devloped by</button>
+            <script>
+                var i = 0;
+                var txt = 'Sailodhar Rabha';
+                var speed = 100;
+
+                function typeWriter() {
+                    if (i < txt.length) {
+                        document.getElementById("Sailo").innerHTML += txt.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <div class="formcontainer">
+        <div class="image">
+                <button style="font-size: 25px; margin-bottom: 20px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Submit Form</button>
+            <form name="myform" action="myphp.php" onsubmit="return Validate();">
+                <div>
+                    <input type="text" placeholder="Name" required>
+                </div>
+                <div>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div>
+                    <input type="number" placeholder="Phone Number">
+                </div>
+                <div>
+                    <textarea placeholder="Enter Your Enquiry" minlength="200px"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="fill">
+            Hello <br> I am working offline. 
+            <h3>
+                Any Enquiry Fill the form I will Contact You as soon as Possible.
+            </h3>
+            <h2>
+                Thank you
+            </h2>
+        </div>
+    </div>
+    <footer>
+        <h2>
+
+            Contact Me
+        </h2>
+        <h4>
+            +91 7619374461
+            <br>
+            sailodharrabha@gmail.com
+        </h4>
+        <p>
+            Copyright&copy;2023-26 <br> By Sailo
+        </p>
+    </footer>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
